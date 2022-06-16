@@ -1,0 +1,61 @@
+header {
+  height: 10vh;
+  background: #1e1e1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header div.logo {
+  color: white;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+  font-weight: 700;
+  -webkit-animation: logo 0.5s linear forwards;
+          animation: logo 0.5s linear forwards;
+}
+
+header nav {
+  -webkit-animation: menu 0.5s linear forwards;
+          animation: menu 0.5s linear forwards;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+header nav ul li a:hover {
+  color: #d5d5d5;
+}
+/*# sourceMappingURL=header.css.map */
