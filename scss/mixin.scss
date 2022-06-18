@@ -1,0 +1,11 @@
+@mixin pad($maxWidth) {
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin phone($maxWidth) {
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}
