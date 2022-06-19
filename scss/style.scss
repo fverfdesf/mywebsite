@@ -54,7 +54,7 @@ body {
       font-size: 5rem;
       z-index: 2;
       letter-spacing: 10px;
-      animation: animate 0.5s linear forwards;
+      animation: animate 1s linear forwards;
       position: relative;
       @include phone(590px) {
         word-break: break-all;
@@ -70,7 +70,7 @@ body {
         margin: auto;
         width: 20%;
         transform: scale(0);
-        animation: animatebottom 0.5s 0.5s linear forwards;
+        animation: animatebottom 0.5s 1s linear forwards;
       }
     }
   }
@@ -328,5 +328,13 @@ body {
         }
       }
     }
+  }
+}
+footer {
+  span {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
   }
 }
