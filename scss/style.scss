@@ -120,54 +120,153 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 2.5rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: 6rem;
+      padding-bottom: 1rem;
+      min-height: 50vh;
+      color: white;
+      @include pad(1040px) {
+        margin-top: 1rem;
+      }
+      section {
+        border-right: 5px solid rgb(194, 62, 84);
+        position: relative;
+        height: 150px;
+        @include pad(1040px) {
+          visibility: hidden;
+          height: 100%;
+        }
+        &::before {
+          content: "";
+          border-bottom: 5px solid rgb(194, 62, 84);
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 100px;
+          @include pad(1040px) {
+            display: none;
+          }
+        }
+        &:nth-child(2)::before {
+          content: "";
+          border-bottom: 5px solid rgb(30, 185, 121);
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 100px;
+        }
 
-      div.left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1 1 400px;
-        max-width: 600px;
-        i {
-          width: 6vw;
-          height: 6vw;
-          background: white;
+        .circle {
+          width: 40px;
+          height: 40px;
+          background-color: rgb(194, 62, 84);
           border-radius: 50%;
-          text-align: center;
-          color: rgb(30, 30, 30);
-          line-height: 6vw;
-          font-size: 3rem;
-          margin-bottom: 1rem;
-          @include pad(1120px) {
-            width: 150px;
-            height: 150px;
-            line-height: 150px;
-            font-size: 4rem;
-          }
-          @include phone(590px) {
-            width: 20vw;
-            height: 20vw;
-            font-size: 3rem;
-            line-height: 20vw;
-            margin-top: 1rem;
-          }
-          @include phone(440px) {
-            font-size: 2.5rem;
+          right: -20px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          position: absolute;
+          @include pad(1040px) {
+            display: none;
           }
         }
-        span {
-          color: white;
-          font-size: 1.5rem;
-          margin: 5px 0;
-          @include phone(390px) {
-            font-size: 1.3rem;
+        &:nth-child(2) .circle {
+          background-color: rgb(30, 185, 121);
+        }
+
+        .content2 {
+          width: 400px;
+          word-break: break-all;
+          position: absolute;
+          top: 50%;
+          right: 100px;
+          transform: translateY(-50%);
+          background-color: rgb(129, 0, 24);
+          border-radius: 1rem;
+          border: 5px solid rgb(194, 62, 84);
+          display: flex;
+          flex-direction: column;
+          padding: 1rem 0;
+          @include pad(1040px) {
+            position: unset;
+            transform: unset;
+            margin: 2rem 0;
+            visibility: visible;
+          }
+          @include phone(400px) {
+            width: 300px;
+          }
+          h3 {
+            font-size: 2rem;
+            text-align: center;
+          }
+          ul {
+            padding: 0 1rem;
+            list-style: disc;
+            max-height: 100%;
+            font-size: 1.1rem;
+            li {
+              margin-top: 5px;
+            }
+          }
+        }
+        &:nth-child(2) .content2 {
+          width: 400px;
+          left: 100px;
+          background-color: rgb(0, 121, 71);
+          border: 5px solid rgb(30, 185, 121);
+          @include phone(400px) {
+            width: 300px;
           }
         }
       }
-      div.right {
-        @extend div.left;
-      }
+      // div.left {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   flex: 1 1 400px;
+      //   max-width: 600px;
+      //   i {
+      //     width: 6vw;
+      //     height: 6vw;
+      //     background: white;
+      //     border-radius: 50%;
+      //     text-align: center;
+      //     color: rgb(30, 30, 30);
+      //     line-height: 6vw;
+      //     font-size: 3rem;
+      //     margin-bottom: 1rem;
+      //     @include pad(1120px) {
+      //       width: 150px;
+      //       height: 150px;
+      //       line-height: 150px;
+      //       font-size: 4rem;
+      //     }
+      //     @include phone(590px) {
+      //       width: 20vw;
+      //       height: 20vw;
+      //       font-size: 3rem;
+      //       line-height: 20vw;
+      //       margin-top: 1rem;
+      //     }
+      //     @include phone(440px) {
+      //       font-size: 2.5rem;
+      //     }
+      //   }
+      //   span {
+      //     color: white;
+      //     font-size: 1.5rem;
+      //     margin: 5px 0;
+      //     @include phone(390px) {
+      //       font-size: 1.3rem;
+      //     }
+      //   }
+      // }
+      // div.right {
+      //   @extend div.left;
+      // }
     }
   }
 

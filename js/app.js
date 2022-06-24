@@ -26,13 +26,14 @@ function secLoad(e) {
   });
   (function () {
     let nav = Header.children[1];
-
+    let media = window.matchMedia("(max-width:590px)");
     if (window.pageYOffset > 0) {
       let bgstyle =
         "background: rgb(30, 30, 30,0.8);transition:all 0.3s linear;box-shadow:0 3px 5px black;";
       Header.style = bgstyle;
-
-      nav.classList.add("changebg");
+      if (media.matches) {
+        nav.classList.add("changebg");
+      }
       return;
     }
     nav.classList.remove("changebg");
